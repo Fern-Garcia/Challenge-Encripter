@@ -46,6 +46,3 @@ Este proyecto es un encriptador de texto basado en JavaScript que permite a los 
 
 - Un navegador web moderno (como Chrome, Firefox, o Edge).
 
-## Ejemplo
-
-**Entrada:**
