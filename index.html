@@ -23,20 +23,21 @@
                 <div class="container__Botones">
                     <button class="boton__Encriptar"> Encriptar </button>
                     <button class="boton__Desencriptar"> Desencriptar </button>
-                    
                 </div>
             </div>
             
             <div class="presentacion__Encriptado">
                 <img src="./Assets/Muñeco.png" alt="Hombre dibujado con lupa inspeccionando un diamante">
-                <p class="texto__Ningun__Msj"><strong>Ningun mensaje fue encontrado</strong></p>
+                <p class="texto__Ningun__Msj"><strong>Ningún mensaje fue encontrado</strong></p>
                 <p class="texto__Ningun__Msj">Ingresa el texto que desees encriptar o desencriptar</p>
                 <p class="container__Texto_Encriptado" id="textoEncriptado"></p>
-                <button class="boton__Copiar"> Copiar </button>
+                <button class="boton__Copiar" style="display: none;"> Copiar </button>
+                <div id="notificacion" class="notificacion"></div>
+
             </div>
-
-
         </section>
     </main>
+
+    <script src="./app.js"></script>
 </body>
 </html>

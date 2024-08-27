@@ -111,31 +111,37 @@ html, body {
 
 
 
-.presentacion__Encriptado{
+.presentacion__Encriptado {
     width: 400px;
     height: 944px;
     background-color: white;
     box-shadow: 5px 5px 15px #e2e2e2;
     margin: 40px 40px 40px 0px;
-    text-align: center;
     border-radius: 32px;
-
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Asegura que el contenido esté en una columna */
+    align-items: center; /* Alinea el contenido a la izquierda */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
+
 .presentacion__Encriptado img {
+    display: block;
     max-width: 100%;
     height: auto; 
-    margin-bottom: 20px; 
+    margin-top: 250px; 
+    align-items: center;
+    justify-content: center;
 }
 
 .texto__Ningun__Msj strong{
     color: #343A40;
     font-family: var(--fuente-inter);
     font-size: 1.9rem;
+    text-align: center;
 }
 
 
@@ -145,7 +151,7 @@ html, body {
     font-size: 1.6rem;
 }
 
-.boton__Copiar{
+.boton__Copiar {
     width: 328px;
     height: 67px;
     background-color: var(--color-fondo);
@@ -154,36 +160,75 @@ html, body {
     color: var(--color-primario);
     font-family: var(--fuente-inter);
     font-size: 1.5rem;
-    margin: 274px 0px 0px 0px;
+    position: absolute;
+    bottom: 20px; /* Posiciona el botón en la parte inferior del contenedor */
+    left: 50%; /* Centra el botón horizontalmente */
+    transform: translateX(-50%); /* Ajusta el botón para que esté centrado */
 }
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    font-family: var(--fuente-inter);
+}
+
+.notificacion.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
 
 .boton__Copiar:hover{
     background-color: #c7c7c7;
 }
 
+.container__Texto_Encriptado {
+    font-family: var(--fuente-inter);
+    color: var(--color-primario);
+    font-size: 2rem;
+    text-align: left; 
+    word-wrap: break-word;
+    width: 100%; 
+    white-space: pre-wrap;
+    max-height: calc(100% - 80px);
+    overflow-y: auto;
+    align-self: flex-start; 
+    margin-top: 0px; 
+}
 
-@media (max-width: 1250px){
 
-    .presentacion__Contenido{
+@media (max-width: 1250px) {
+
+    .presentacion__Contenido {
         width: 100%;
         height: auto;
-        padding: 40px 40px 40px 40px;
+        padding: 40px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .presentacion__TB{
+    .presentacion__TB {
         width: 680px;
-        height: 650px;
-        padding: 40px 40px 40px 40px;
+        height: auto;
+        padding: 40px;
         display: flex;
         flex-direction: column;
-        align-items: right;
+        align-items: center; /* Alinea el contenido al centro */
     }
 
-    .indicacion__Seccion{
+    .indicacion__Seccion {
         display: flex;
         align-items: center;
         justify-content: flex-start; /* Asegura que el contenido esté alineado a la izquierda */
@@ -193,49 +238,48 @@ html, body {
     }
 
     .presentacion__Encriptado img {
-        display: none; /* Oculta la imagen */
-
+        display: none;
     }
 
-    .presentacion__Encriptado{
-        width: 680px; /* Ancho completo disponible */
-        height: auto; /* Altura dinámica */
+    .presentacion__Encriptado {
+        width: 680px; 
+        height: auto;
         display: flex;
-        flex-grow: 1;
+        flex-direction: column; 
         margin: 0px 40px 40px 40px;
-        flex-wrap: wrap;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        /* padding: 20px; Ajusta el padding según sea necesario */
+        padding: 20px;
+        position: relative;
+        min-height: 150px;
     }
 
-    .boton__Copiar{
-        /*display: none;  Oculta la imagen */
-        margin: 2%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .boton__Copiar {
+        width: 328px;
+        height: 67px;
+        background-color: var(--color-fondo);
+        border: 1px solid var(--color-primario);
+        border-radius: 24px;
+        color: var(--color-primario);
+        font-family: var(--fuente-inter);
+        font-size: 1.5rem; 
     }
 
-    .texto__Ningun__Msj strong{
+    .texto__Ningun__Msj strong {
         padding: 1%;
         color: #343A40;
         font-family: var(--fuente-inter);
         font-size: 1.8rem;
     }
-    
-    
-    .texto__Ningun__Msj{
+
+    .texto__Ningun__Msj {
         color: #343A40;
         font-family: var(--fuente-inter);
         font-size: 1.4rem;
         padding: 1%;
-
     }
-    
-
 }
+
+
+
 
 @media (max-width: 750px){
     .presentacion__Contenido{
@@ -260,7 +304,7 @@ html, body {
     .container__Botones{
         display: flex;
         flex-direction: column;
-        align-items: center; /* Asegura que los botones estén centrados */
+        align-items: center;
         gap: 20px;
         padding-top: 20px;
     }
@@ -269,19 +313,31 @@ html, body {
         width: 100%;
         max-width: 375px;
         height: auto;
+        min-height: 200px;
         box-sizing: border-box;
     }
-
-    .presentacion__Encriptado{
+    .presentacion__Encriptado img {
+        display: none;
+    }
+    .presentacion__Encriptado {
         width: 100%;
-        max-width: 300px;
+        max-width: auto;
         height: auto;
         margin: 20px 0;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-start; 
+        align-items: flex-end; 
         padding: 20px;
+    }
+
+    .container__Texto_Encriptado {
+        width: 100%;
+        max-width: 100%;
+        text-align: left; 
+        align-self: flex-start; 
+        word-wrap: break-word;
+        white-space: pre-wrap;
     }
 
     .boton__Copiar{
@@ -291,40 +347,4 @@ html, body {
     }
 }
 
-@media (max-width: 500px){
-    .presentacion__Contenido{
-        width: 100%;
-        max-width: 320px;
-    }
 
-    .input__Texto{
-        max-width: 320px;
-    }
-
-    .presentacion__Encriptado{
-        max-width: 280px;
-    }
-
-    .boton__Copiar{
-        max-width: 280px;
-    }
-}
-
-@media (max-width: 375px){
-    .presentacion__Contenido{
-        width: 100%;
-        max-width: 280px;
-    }
-
-    .input__Texto{
-        max-width: 280px;
-    }
-
-    .presentacion__Encriptado{
-        max-width: 260px;
-    }
-
-    .boton__Copiar{
-        max-width: 260px;
-    }
-}
