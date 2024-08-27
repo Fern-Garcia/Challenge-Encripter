@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="./Style/style.css">
+    <link rel="icon" href="./Assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <main class="main-container">
+        
+        <section class="presentacion__Contenido">
+            <img class="presentacion__Logo" src="./Assets/Logo.png" alt="Logotipo de Alura Latam">
+            <div class="presentacion__TB">
+                <textarea type="text" id="textoUsuario" class="input__Texto" placeholder="Ingrese el texto aquí"></textarea>
+                <div class="indicacion__Seccion">
+                    <img src="./Assets/bi_exclamation-circle-fill.png" alt="Signo de exclamacion resaltando texto">
+                    <p class="indicacion__Minusculas">Solo letras minúsculas y sin acentos</p>
+                </div>
+                
+                <div class="container__Botones">
+                    <button class="boton__Encriptar"> Encriptar </button>
+                    <button class="boton__Desencriptar"> Desencriptar </button>
+                    
+                </div>
+            </div>
+            
+            <div class="presentacion__Encriptado">
+                <img src="./Assets/Muñeco.png" alt="Hombre dibujado con lupa inspeccionando un diamante">
+                <p class="texto__Ningun__Msj"><strong>Ningun mensaje fue encontrado</strong></p>
+                <p class="texto__Ningun__Msj">Ingresa el texto que desees encriptar o desencriptar</p>
+                <p class="container__Texto_Encriptado" id="textoEncriptado"></p>
+                <button class="boton__Copiar"> Copiar </button>
+            </div>
+
+
+        </section>
+    </main>
+</body>
+</html>
