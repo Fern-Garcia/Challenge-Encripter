@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imagen = document.querySelector('.presentacion__Encriptado img');
     const ningunMensajeEncontrado = document.querySelectorAll('.texto__Ningun__Msj');
 
-    // Función para obtener el ancho de la ventana
+
     const getViewportWidth = () => window.innerWidth;
 
     const llavesEncriptacion = {
@@ -40,13 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const mostrarVistaPrincipal = () => {
         if (getViewportWidth() <= 1250) {
-            // Para resoluciones menores o iguales a 1250px
+     
             textoEncriptado.style.display = 'none';
            
             ningunMensajeEncontrado.forEach(element => element.style.display = 'block');
             botonCopiar.style.display = 'none';
         } else {
-            // Para resoluciones mayores a 1250px
+       
             textoEncriptado.style.display = 'none';
             imagen.style.display = 'block';
             ningunMensajeEncontrado.forEach(element => element.style.display = 'block');
@@ -85,11 +85,11 @@ document.addEventListener('DOMContentLoaded', function() {
             
             setTimeout(() => {
                 notificacion.classList.remove('mostrar');
-            }, 3000); // Oculta la notificación después de 3 segundos
+            }, 3000); 
         });
     });
     
 
-    // Inicialmente muestra la vista principal según la resolución
+
     mostrarVistaPrincipal();
 });
